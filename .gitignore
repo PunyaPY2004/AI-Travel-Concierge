@@ -1,29 +1,23 @@
-# API Keys - NEVER commit these
+# API Keys - NEVER commit these!
 .env
 *.env
 secrets.txt
-api_keys.txt
+.streamlit/secrets.toml
 
-# Python
+# Python cache
 __pycache__/
-*.py[cod]
+*.pyc
 *.pyo
-*.pyd
-.Python
-*.egg-info/
-dist/
-build/
 
-# Jupyter Notebooks checkpoints
-.ipynb_checkpoints/
-*/.ipynb_checkpoints/*
-
-# Database files
+# Database (auto-created, no need to track)
 *.db
 *.sqlite
 *.sqlite3
 
-# Virtual environments
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Virtual environment
 venv/
 env/
 .venv/
@@ -31,7 +25,3 @@ env/
 # OS files
 .DS_Store
 Thumbs.db
-
-# Colab specific
-*.credentials.json
-drive/

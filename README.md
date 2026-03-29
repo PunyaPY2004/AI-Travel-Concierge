@@ -1,6 +1,10 @@
 # ✈️ AI Travel Concierge
 ### AI Agent | Track A | 8-Week Internship Project
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![LangChain](https://img.shields.io/badge/LangChain-Latest-green)
+![Groq](https://img.shields.io/badge/LLM-Groq-orange)
+![Streamlit](https://img.shields.io/badge/UI-Streamlit-red)
 ---
 
 ## 🌍 Project Overview
@@ -130,16 +134,23 @@ Bot:  💰 Budget: $1,120/person | Mid-range: $2,240 | Luxury: $5,600
 
 ---
 
-## 📁 Project Structure
 
+## 🗂️ Project Structure
 ```
-AI_Travel_Concierge/
-├── AI_Travel_Concierge_Week1_2.ipynb   # RAG Foundation
-├── AI_Travel_Concierge_Week3_4.ipynb   # Agent + Tools
-├── AI_Travel_Concierge_Week5_6.ipynb   # Specialization
-├── AI_Travel_Concierge_Week7_8.ipynb   # Final App
-├── README.md                            # This file
-└── travel_concierge.db                  # SQLite (auto-created)
+ai-travel-concierge/
+│
+├── app.py              # Main Streamlit app (UI)
+├── agent.py            # LangChain agent (brain)
+├── tools.py            # API tools (weather, flights, hotels)
+├── rag_pipeline.py     # RAG knowledge base
+├── database.py         # SQLite database
+│
+├── notebooks/
+│   ├── Week1_8.ipynb
+│
+├── requirements.txt
+├── README.md
+└── .gitignore
 ```
 
 ---

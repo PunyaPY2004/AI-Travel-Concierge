@@ -3,7 +3,7 @@
 
 ## 🚀 Live Demo
 👉 **[Click here to try the app](https://ai-tavel-concierge.streamlit.app/)**
-```
+
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-Latest-green)
 ![Groq](https://img.shields.io/badge/LLM-Groq-orange)

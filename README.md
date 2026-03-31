@@ -1,11 +1,15 @@
 # ✈️ AI Travel Concierge
 ### AI Agent | Track A | 8-Week Internship Project
 
+## 🚀 Live Demo
+👉 **[Click here to try the app](https://ai-tavel-concierge.streamlit.app/)**
+```
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 ![LangChain](https://img.shields.io/badge/LangChain-Latest-green)
 ![Groq](https://img.shields.io/badge/LLM-Groq-orange)
 ![Streamlit](https://img.shields.io/badge/UI-Streamlit-red)
 ---
+
 
 ## 🌍 Project Overview
 

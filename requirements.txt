@@ -17,6 +17,7 @@ faiss-cpu
 # APIs
 google-search-results
 requests
+streamlit
 
 # UI
 gradio

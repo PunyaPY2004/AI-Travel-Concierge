@@ -514,15 +514,9 @@ with st.spinner("Loading AI Travel Concierge..."):
 # ── Header ────────────────────────────────────────────────────
 st.title("✈️ AI Travel Concierge")
 st.markdown(
-    f"**Powered by Groq ({model_name}) + LangChain** | "
-    "Your complete AI travel planning assistant — Weeks 1-8!"
+    f"Smart travel planning made easy — from flights and hotels to itineraries and budgets, all in one place."
+    
 )
-
-if llm:
-    st.success("✅ AI Ready! All features from Week 1-8 available.")
-else:
-    st.error("❌ AI failed to load. Check GROQ_API_KEY in Streamlit Secrets.")
-    st.stop()
 
 st.divider()
 

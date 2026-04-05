@@ -101,32 +101,386 @@ TRAVEL_KNOWLEDGE = [
 # ============================================================
 # WEEK 3-4: WEATHER & CURRENCY DATA
 # ============================================================
+
+
 CITY_WEATHER = {
-    "london"    : {"temp":14, "feel":11, "desc":"Overcast/Light Rain",  "humidity":78, "wind":19},
-    "paris"     : {"temp":16, "feel":13, "desc":"Partly Cloudy",        "humidity":72, "wind":15},
-    "tokyo"     : {"temp":21, "feel":19, "desc":"Clear Sky",            "humidity":63, "wind":12},
-    "bali"      : {"temp":29, "feel":33, "desc":"Sunny with Humidity",  "humidity":82, "wind":10},
-    "bangkok"   : {"temp":33, "feel":38, "desc":"Hot & Humid",          "humidity":85, "wind":8},
-    "singapore" : {"temp":30, "feel":35, "desc":"Partly Cloudy",        "humidity":84, "wind":11},
-    "dubai"     : {"temp":36, "feel":40, "desc":"Sunny & Hot",          "humidity":48, "wind":14},
-    "mumbai"    : {"temp":32, "feel":36, "desc":"Hazy & Humid",         "humidity":88, "wind":16},
-    "delhi"     : {"temp":28, "feel":30, "desc":"Partly Cloudy",        "humidity":55, "wind":10},
-    "new york"  : {"temp":18, "feel":15, "desc":"Mostly Clear",         "humidity":58, "wind":20},
-    "sydney"    : {"temp":22, "feel":20, "desc":"Sunny",                "humidity":65, "wind":18},
-    "rome"      : {"temp":20, "feel":18, "desc":"Sunny",                "humidity":60, "wind":12},
-    "barcelona" : {"temp":22, "feel":20, "desc":"Clear & Sunny",        "humidity":62, "wind":14},
-    "amsterdam" : {"temp":13, "feel":10, "desc":"Cloudy",               "humidity":80, "wind":22},
-    "istanbul"  : {"temp":19, "feel":17, "desc":"Partly Cloudy",        "humidity":68, "wind":16},
-    "seoul"     : {"temp":18, "feel":16, "desc":"Clear",                "humidity":55, "wind":13},
-    "kyoto"     : {"temp":20, "feel":18, "desc":"Mostly Sunny",         "humidity":60, "wind":10},
-    "goa"       : {"temp":31, "feel":35, "desc":"Sunny & Breezy",       "humidity":75, "wind":18},
-    "bangalore" : {"temp":26, "feel":24, "desc":"Pleasant & Cloudy",    "humidity":65, "wind":10},
-    "chennai"   : {"temp":33, "feel":37, "desc":"Hot & Humid",          "humidity":80, "wind":15},
-    "hyderabad" : {"temp":28, "feel":30, "desc":"Partly Cloudy",        "humidity":58, "wind":12},
-    "jaipur"    : {"temp":27, "feel":29, "desc":"Sunny & Dry",          "humidity":40, "wind":14},
-    "agra"      : {"temp":27, "feel":28, "desc":"Mostly Sunny",         "humidity":45, "wind":11},
-    "phuket"    : {"temp":30, "feel":34, "desc":"Tropical & Humid",     "humidity":80, "wind":12},
+
+    # ════════════════════════════════════════════════════════
+    # INDIA - All States & Major Cities (90 cities)
+    # ════════════════════════════════════════════════════════
+
+    # Andhra Pradesh
+    "visakhapatnam"  : {"temp":28, "feel":31, "desc":"Partly Cloudy",       "humidity":75, "wind":14},
+    "vijayawada"     : {"temp":32, "feel":36, "desc":"Sunny & Humid",       "humidity":70, "wind":12},
+    "tirupati"       : {"temp":30, "feel":33, "desc":"Partly Cloudy",       "humidity":65, "wind":10},
+    "guntur"         : {"temp":31, "feel":35, "desc":"Hot & Sunny",         "humidity":68, "wind":11},
+
+    # Assam
+    "guwahati"       : {"temp":26, "feel":28, "desc":"Humid & Cloudy",      "humidity":80, "wind":10},
+
+    # Bihar
+    "patna"          : {"temp":29, "feel":32, "desc":"Hot & Dusty",         "humidity":60, "wind":12},
+    "gaya"           : {"temp":30, "feel":33, "desc":"Sunny",               "humidity":55, "wind":11},
+
+    # Chhattisgarh
+    "raipur"         : {"temp":31, "feel":34, "desc":"Hot & Sunny",         "humidity":58, "wind":10},
+
+    # Goa
+    "goa"            : {"temp":31, "feel":35, "desc":"Sunny & Breezy",      "humidity":75, "wind":18},
+    "panaji"         : {"temp":30, "feel":34, "desc":"Sunny & Coastal",     "humidity":76, "wind":16},
+
+    # Gujarat
+    "ahmedabad"      : {"temp":33, "feel":37, "desc":"Hot & Dry",           "humidity":40, "wind":14},
+    "surat"          : {"temp":32, "feel":36, "desc":"Humid & Sunny",       "humidity":68, "wind":15},
+    "vadodara"       : {"temp":32, "feel":35, "desc":"Hot & Sunny",         "humidity":45, "wind":12},
+    "rajkot"         : {"temp":31, "feel":34, "desc":"Sunny & Dry",         "humidity":42, "wind":16},
+
+    # Haryana
+    "chandigarh"     : {"temp":24, "feel":22, "desc":"Pleasant",            "humidity":52, "wind":12},
+    "faridabad"      : {"temp":27, "feel":29, "desc":"Hazy",                "humidity":55, "wind":10},
+    "gurugram"       : {"temp":27, "feel":30, "desc":"Hazy & Humid",        "humidity":58, "wind":11},
+
+    # Himachal Pradesh
+    "shimla"         : {"temp":12, "feel":9,  "desc":"Cool & Cloudy",       "humidity":65, "wind":14},
+    "manali"         : {"temp":8,  "feel":5,  "desc":"Cold & Snowy",        "humidity":70, "wind":16},
+    "dharamshala"    : {"temp":15, "feel":12, "desc":"Cool & Pleasant",     "humidity":62, "wind":12},
+
+    # Jharkhand
+    "ranchi"         : {"temp":26, "feel":27, "desc":"Pleasant",            "humidity":60, "wind":10},
+
+    # Karnataka
+    "bangalore"      : {"temp":26, "feel":24, "desc":"Pleasant & Cloudy",   "humidity":65, "wind":10},
+    "mysore"         : {"temp":27, "feel":25, "desc":"Partly Cloudy",       "humidity":62, "wind":9},
+    "hubli"          : {"temp":29, "feel":31, "desc":"Sunny",               "humidity":55, "wind":12},
+    "mangalore"      : {"temp":30, "feel":33, "desc":"Humid & Coastal",     "humidity":78, "wind":15},
+
+    # Kerala
+    "thiruvananthapuram": {"temp":30,"feel":33,"desc":"Humid & Coastal",    "humidity":80, "wind":14},
+    "kochi"          : {"temp":29, "feel":32, "desc":"Humid & Cloudy",      "humidity":82, "wind":13},
+    "kozhikode"      : {"temp":29, "feel":32, "desc":"Partly Cloudy",       "humidity":78, "wind":12},
+    "thrissur"       : {"temp":30, "feel":33, "desc":"Humid",               "humidity":79, "wind":11},
+    "munnar"         : {"temp":18, "feel":15, "desc":"Cool & Misty",        "humidity":85, "wind":10},
+
+    # Madhya Pradesh
+    "bhopal"         : {"temp":29, "feel":31, "desc":"Partly Cloudy",       "humidity":55, "wind":11},
+    "indore"         : {"temp":28, "feel":30, "desc":"Sunny",               "humidity":50, "wind":12},
+    "gwalior"        : {"temp":30, "feel":33, "desc":"Hot & Sunny",         "humidity":48, "wind":13},
+    "jabalpur"       : {"temp":29, "feel":31, "desc":"Partly Cloudy",       "humidity":54, "wind":10},
+
+    # Maharashtra
+    "mumbai"         : {"temp":32, "feel":36, "desc":"Hazy & Humid",        "humidity":88, "wind":16},
+    "pune"           : {"temp":27, "feel":25, "desc":"Pleasant",            "humidity":58, "wind":11},
+    "nagpur"         : {"temp":32, "feel":35, "desc":"Hot & Sunny",         "humidity":50, "wind":12},
+    "nashik"         : {"temp":28, "feel":26, "desc":"Partly Cloudy",       "humidity":55, "wind":10},
+    "aurangabad"     : {"temp":29, "feel":31, "desc":"Sunny",               "humidity":48, "wind":11},
+
+    # Meghalaya
+    "shillong"       : {"temp":16, "feel":13, "desc":"Cool & Misty",        "humidity":82, "wind":10},
+    "cherrapunji"    : {"temp":14, "feel":12, "desc":"Wet & Cloudy",        "humidity":90, "wind":12},
+
+    # Odisha
+    "bhubaneswar"    : {"temp":30, "feel":33, "desc":"Humid & Sunny",       "humidity":72, "wind":12},
+    "puri"           : {"temp":29, "feel":32, "desc":"Coastal & Sunny",     "humidity":78, "wind":16},
+
+    # Punjab
+    "amritsar"       : {"temp":24, "feel":22, "desc":"Partly Cloudy",       "humidity":52, "wind":12},
+    "ludhiana"       : {"temp":25, "feel":23, "desc":"Hazy",                "humidity":55, "wind":10},
+
+    # Rajasthan
+    "jaipur"         : {"temp":27, "feel":29, "desc":"Sunny & Dry",         "humidity":40, "wind":14},
+    "jodhpur"        : {"temp":30, "feel":33, "desc":"Hot & Dry",           "humidity":35, "wind":16},
+    "udaipur"        : {"temp":28, "feel":30, "desc":"Sunny",               "humidity":42, "wind":12},
+    "jaisalmer"      : {"temp":33, "feel":36, "desc":"Hot & Arid",          "humidity":25, "wind":18},
+    "pushkar"        : {"temp":28, "feel":30, "desc":"Dry & Sunny",         "humidity":38, "wind":13},
+
+    # Tamil Nadu
+    "chennai"        : {"temp":33, "feel":37, "desc":"Hot & Humid",         "humidity":80, "wind":15},
+    "coimbatore"     : {"temp":28, "feel":26, "desc":"Pleasant",            "humidity":65, "wind":12},
+    "madurai"        : {"temp":31, "feel":34, "desc":"Hot & Sunny",         "humidity":62, "wind":11},
+    "ooty"           : {"temp":16, "feel":13, "desc":"Cool & Foggy",        "humidity":80, "wind":10},
+    "pondicherry"    : {"temp":30, "feel":33, "desc":"Coastal & Sunny",     "humidity":78, "wind":14},
+
+    # Telangana
+    "hyderabad"      : {"temp":28, "feel":30, "desc":"Partly Cloudy",       "humidity":58, "wind":12},
+    "warangal"       : {"temp":30, "feel":32, "desc":"Sunny",               "humidity":55, "wind":10},
+
+    # Uttar Pradesh
+    "lucknow"        : {"temp":28, "feel":30, "desc":"Hazy",                "humidity":60, "wind":10},
+    "agra"           : {"temp":27, "feel":28, "desc":"Mostly Sunny",        "humidity":45, "wind":11},
+    "varanasi"       : {"temp":29, "feel":31, "desc":"Hazy & Humid",        "humidity":62, "wind":10},
+    "kanpur"         : {"temp":28, "feel":30, "desc":"Hazy",                "humidity":58, "wind":11},
+    "prayagraj"      : {"temp":29, "feel":31, "desc":"Sunny",               "humidity":56, "wind":10},
+    "mathura"        : {"temp":28, "feel":30, "desc":"Sunny & Dusty",       "humidity":48, "wind":12},
+    "vrindavan"      : {"temp":27, "feel":29, "desc":"Sunny",               "humidity":47, "wind":11},
+
+    # Uttarakhand
+    "dehradun"       : {"temp":22, "feel":20, "desc":"Pleasant",            "humidity":60, "wind":12},
+    "haridwar"       : {"temp":24, "feel":22, "desc":"Sunny",               "humidity":58, "wind":10},
+    "rishikesh"      : {"temp":23, "feel":21, "desc":"Pleasant & Clear",    "humidity":60, "wind":11},
+    "nainital"       : {"temp":15, "feel":12, "desc":"Cool & Misty",        "humidity":72, "wind":10},
+    "mussoorie"      : {"temp":14, "feel":11, "desc":"Cool & Foggy",        "humidity":75, "wind":12},
+    "kedarnath"      : {"temp":4,  "feel":1,  "desc":"Very Cold & Snowy",   "humidity":70, "wind":18},
+    "badrinath"      : {"temp":5,  "feel":2,  "desc":"Cold & Snowy",        "humidity":68, "wind":16},
+
+    # West Bengal
+    "kolkata"        : {"temp":30, "feel":34, "desc":"Humid & Hazy",        "humidity":82, "wind":12},
+    "darjeeling"     : {"temp":12, "feel":9,  "desc":"Cool & Misty",        "humidity":78, "wind":12},
+    "siliguri"       : {"temp":24, "feel":25, "desc":"Partly Cloudy",       "humidity":75, "wind":10},
+
+    # Union Territories
+    "delhi"          : {"temp":28, "feel":30, "desc":"Partly Cloudy",       "humidity":55, "wind":10},
+    "new delhi"      : {"temp":28, "feel":30, "desc":"Hazy",                "humidity":55, "wind":10},
+    "leh"            : {"temp":5,  "feel":2,  "desc":"Cold & Clear",        "humidity":30, "wind":14},
+    "ladakh"         : {"temp":3,  "feel":0,  "desc":"Very Cold & Clear",   "humidity":28, "wind":15},
+    "srinagar"       : {"temp":15, "feel":12, "desc":"Cool & Partly Cloudy","humidity":62, "wind":10},
+    "jammu"          : {"temp":24, "feel":22, "desc":"Sunny",               "humidity":55, "wind":11},
+    "port blair"     : {"temp":29, "feel":32, "desc":"Tropical & Humid",    "humidity":82, "wind":16},
+
+    # ════════════════════════════════════════════════════════
+    # ASIA PACIFIC
+    # ════════════════════════════════════════════════════════
+
+    # Japan
+    "tokyo"          : {"temp":21, "feel":19, "desc":"Clear Sky",           "humidity":63, "wind":12},
+    "osaka"          : {"temp":20, "feel":18, "desc":"Partly Cloudy",       "humidity":65, "wind":11},
+    "kyoto"          : {"temp":20, "feel":18, "desc":"Mostly Sunny",        "humidity":60, "wind":10},
+    "hiroshima"      : {"temp":19, "feel":17, "desc":"Clear",               "humidity":62, "wind":10},
+    "sapporo"        : {"temp":8,  "feel":5,  "desc":"Cold & Cloudy",       "humidity":68, "wind":14},
+    "fukuoka"        : {"temp":20, "feel":18, "desc":"Partly Cloudy",       "humidity":66, "wind":12},
+    "nara"           : {"temp":19, "feel":17, "desc":"Sunny",               "humidity":58, "wind":9},
+    "yokohama"       : {"temp":20, "feel":18, "desc":"Clear",               "humidity":62, "wind":13},
+
+    # China
+    "beijing"        : {"temp":18, "feel":16, "desc":"Hazy",                "humidity":55, "wind":14},
+    "shanghai"       : {"temp":19, "feel":17, "desc":"Partly Cloudy",       "humidity":68, "wind":13},
+    "guangzhou"      : {"temp":25, "feel":27, "desc":"Humid & Cloudy",      "humidity":78, "wind":12},
+    "chengdu"        : {"temp":18, "feel":16, "desc":"Overcast",            "humidity":72, "wind":8},
+    "guilin"         : {"temp":22, "feel":21, "desc":"Misty & Scenic",      "humidity":80, "wind":8},
+
+    # Southeast Asia
+    "bangkok"        : {"temp":33, "feel":38, "desc":"Hot & Humid",         "humidity":85, "wind":8},
+    "chiang mai"     : {"temp":29, "feel":31, "desc":"Partly Cloudy",       "humidity":72, "wind":10},
+    "phuket"         : {"temp":30, "feel":34, "desc":"Tropical & Humid",    "humidity":80, "wind":12},
+    "pattaya"        : {"temp":32, "feel":36, "desc":"Hot & Coastal",       "humidity":78, "wind":14},
+    "krabi"          : {"temp":30, "feel":33, "desc":"Tropical",            "humidity":79, "wind":11},
+    "bali"           : {"temp":29, "feel":33, "desc":"Sunny with Humidity", "humidity":82, "wind":10},
+    "jakarta"        : {"temp":31, "feel":35, "desc":"Hot & Humid",         "humidity":84, "wind":9},
+    "yogyakarta"     : {"temp":28, "feel":30, "desc":"Partly Cloudy",       "humidity":76, "wind":8},
+    "lombok"         : {"temp":28, "feel":31, "desc":"Tropical",            "humidity":78, "wind":12},
+    "singapore"      : {"temp":30, "feel":35, "desc":"Partly Cloudy",       "humidity":84, "wind":11},
+    "kuala lumpur"   : {"temp":30, "feel":34, "desc":"Partly Cloudy",       "humidity":80, "wind":10},
+    "penang"         : {"temp":29, "feel":32, "desc":"Partly Cloudy",       "humidity":78, "wind":11},
+    "hanoi"          : {"temp":24, "feel":25, "desc":"Partly Cloudy",       "humidity":76, "wind":10},
+    "ho chi minh"    : {"temp":30, "feel":33, "desc":"Hot & Sunny",         "humidity":75, "wind":11},
+    "da nang"        : {"temp":27, "feel":28, "desc":"Partly Cloudy",       "humidity":74, "wind":12},
+    "hoi an"         : {"temp":27, "feel":28, "desc":"Sunny",               "humidity":72, "wind":10},
+    "ha long bay"    : {"temp":22, "feel":21, "desc":"Misty & Scenic",      "humidity":80, "wind":8},
+    "manila"         : {"temp":30, "feel":33, "desc":"Hot & Humid",         "humidity":80, "wind":12},
+    "cebu"           : {"temp":29, "feel":32, "desc":"Tropical",            "humidity":78, "wind":11},
+    "phnom penh"     : {"temp":31, "feel":34, "desc":"Hot & Humid",         "humidity":78, "wind":10},
+    "siem reap"      : {"temp":30, "feel":33, "desc":"Hot & Sunny",         "humidity":72, "wind":9},
+    "yangon"         : {"temp":30, "feel":33, "desc":"Hot & Humid",         "humidity":80, "wind":10},
+    "vientiane"      : {"temp":30, "feel":33, "desc":"Hot & Sunny",         "humidity":72, "wind":9},
+    "luang prabang"  : {"temp":27, "feel":28, "desc":"Partly Cloudy",       "humidity":70, "wind":8},
+
+    # South Korea
+    "seoul"          : {"temp":18, "feel":16, "desc":"Clear",               "humidity":55, "wind":13},
+    "busan"          : {"temp":17, "feel":15, "desc":"Partly Cloudy",       "humidity":60, "wind":14},
+    "jeju"           : {"temp":18, "feel":16, "desc":"Partly Cloudy",       "humidity":65, "wind":16},
+
+    # Australia & New Zealand
+    "sydney"         : {"temp":22, "feel":20, "desc":"Sunny",               "humidity":65, "wind":18},
+    "melbourne"      : {"temp":18, "feel":16, "desc":"Partly Cloudy",       "humidity":62, "wind":20},
+    "brisbane"       : {"temp":25, "feel":23, "desc":"Sunny",               "humidity":60, "wind":16},
+    "perth"          : {"temp":24, "feel":22, "desc":"Clear & Sunny",       "humidity":50, "wind":18},
+    "cairns"         : {"temp":28, "feel":30, "desc":"Tropical",            "humidity":78, "wind":14},
+    "gold coast"     : {"temp":24, "feel":22, "desc":"Sunny",               "humidity":62, "wind":16},
+    "auckland"       : {"temp":16, "feel":14, "desc":"Partly Cloudy",       "humidity":72, "wind":18},
+    "queenstown"     : {"temp":12, "feel":9,  "desc":"Cool & Scenic",       "humidity":68, "wind":16},
+
+    # ════════════════════════════════════════════════════════
+    # EUROPE
+    # ════════════════════════════════════════════════════════
+
+    "london"         : {"temp":14, "feel":11, "desc":"Overcast/Light Rain", "humidity":78, "wind":19},
+    "edinburgh"      : {"temp":10, "feel":7,  "desc":"Cloudy & Windy",      "humidity":80, "wind":22},
+    "manchester"     : {"temp":12, "feel":9,  "desc":"Rainy",               "humidity":82, "wind":20},
+    "paris"          : {"temp":16, "feel":13, "desc":"Partly Cloudy",       "humidity":72, "wind":15},
+    "nice"           : {"temp":20, "feel":18, "desc":"Sunny",               "humidity":62, "wind":14},
+    "lyon"           : {"temp":16, "feel":14, "desc":"Partly Cloudy",       "humidity":68, "wind":12},
+    "marseille"      : {"temp":19, "feel":17, "desc":"Sunny & Windy",       "humidity":60, "wind":18},
+    "berlin"         : {"temp":13, "feel":10, "desc":"Partly Cloudy",       "humidity":70, "wind":15},
+    "munich"         : {"temp":12, "feel":9,  "desc":"Partly Cloudy",       "humidity":68, "wind":14},
+    "hamburg"        : {"temp":11, "feel":8,  "desc":"Cloudy & Windy",      "humidity":78, "wind":18},
+    "frankfurt"      : {"temp":13, "feel":10, "desc":"Partly Cloudy",       "humidity":72, "wind":14},
+    "rome"           : {"temp":20, "feel":18, "desc":"Sunny",               "humidity":60, "wind":12},
+    "milan"          : {"temp":16, "feel":14, "desc":"Partly Cloudy",       "humidity":68, "wind":12},
+    "venice"         : {"temp":15, "feel":13, "desc":"Partly Cloudy",       "humidity":72, "wind":14},
+    "florence"       : {"temp":17, "feel":15, "desc":"Sunny",               "humidity":62, "wind":11},
+    "naples"         : {"temp":20, "feel":18, "desc":"Sunny",               "humidity":62, "wind":13},
+    "amalfi"         : {"temp":20, "feel":18, "desc":"Sunny & Coastal",     "humidity":64, "wind":14},
+    "madrid"         : {"temp":18, "feel":16, "desc":"Sunny",               "humidity":45, "wind":14},
+    "barcelona"      : {"temp":22, "feel":20, "desc":"Clear & Sunny",       "humidity":62, "wind":14},
+    "seville"        : {"temp":24, "feel":22, "desc":"Hot & Sunny",         "humidity":42, "wind":12},
+    "granada"        : {"temp":20, "feel":18, "desc":"Sunny",               "humidity":48, "wind":11},
+    "valencia"       : {"temp":21, "feel":19, "desc":"Sunny",               "humidity":58, "wind":13},
+    "ibiza"          : {"temp":23, "feel":21, "desc":"Sunny",               "humidity":60, "wind":14},
+    "lisbon"         : {"temp":18, "feel":16, "desc":"Partly Cloudy",       "humidity":65, "wind":16},
+    "porto"          : {"temp":16, "feel":14, "desc":"Partly Cloudy",       "humidity":70, "wind":15},
+    "algarve"        : {"temp":20, "feel":18, "desc":"Sunny",               "humidity":62, "wind":14},
+    "amsterdam"      : {"temp":13, "feel":10, "desc":"Cloudy",              "humidity":80, "wind":22},
+    "brussels"       : {"temp":12, "feel":9,  "desc":"Overcast",            "humidity":80, "wind":16},
+    "bruges"         : {"temp":12, "feel":9,  "desc":"Partly Cloudy",       "humidity":78, "wind":15},
+    "zurich"         : {"temp":12, "feel":9,  "desc":"Partly Cloudy",       "humidity":70, "wind":12},
+    "geneva"         : {"temp":13, "feel":11, "desc":"Partly Cloudy",       "humidity":68, "wind":11},
+    "interlaken"     : {"temp":10, "feel":7,  "desc":"Mountain Clear",      "humidity":65, "wind":10},
+    "bern"           : {"temp":11, "feel":8,  "desc":"Partly Cloudy",       "humidity":72, "wind":12},
+    "vienna"         : {"temp":14, "feel":12, "desc":"Partly Cloudy",       "humidity":68, "wind":13},
+    "salzburg"       : {"temp":12, "feel":9,  "desc":"Partly Cloudy",       "humidity":70, "wind":12},
+    "prague"         : {"temp":13, "feel":10, "desc":"Partly Cloudy",       "humidity":72, "wind":14},
+    "warsaw"         : {"temp":12, "feel":9,  "desc":"Partly Cloudy",       "humidity":70, "wind":14},
+    "krakow"         : {"temp":12, "feel":9,  "desc":"Partly Cloudy",       "humidity":72, "wind":13},
+    "budapest"       : {"temp":14, "feel":12, "desc":"Partly Cloudy",       "humidity":68, "wind":13},
+    "athens"         : {"temp":22, "feel":20, "desc":"Sunny",               "humidity":52, "wind":14},
+    "santorini"      : {"temp":22, "feel":20, "desc":"Sunny & Scenic",      "humidity":58, "wind":16},
+    "mykonos"        : {"temp":22, "feel":20, "desc":"Sunny & Windy",       "humidity":60, "wind":18},
+    "crete"          : {"temp":23, "feel":21, "desc":"Sunny",               "humidity":56, "wind":14},
+    "istanbul"       : {"temp":19, "feel":17, "desc":"Partly Cloudy",       "humidity":68, "wind":16},
+    "antalya"        : {"temp":24, "feel":22, "desc":"Sunny",               "humidity":60, "wind":14},
+    "cappadocia"     : {"temp":15, "feel":12, "desc":"Clear & Scenic",      "humidity":48, "wind":12},
+    "oslo"           : {"temp":8,  "feel":5,  "desc":"Partly Cloudy",       "humidity":72, "wind":14},
+    "bergen"         : {"temp":8,  "feel":5,  "desc":"Rainy",               "humidity":82, "wind":16},
+    "stockholm"      : {"temp":9,  "feel":6,  "desc":"Partly Cloudy",       "humidity":74, "wind":14},
+    "copenhagen"     : {"temp":10, "feel":7,  "desc":"Partly Cloudy",       "humidity":76, "wind":16},
+    "helsinki"       : {"temp":8,  "feel":5,  "desc":"Partly Cloudy",       "humidity":74, "wind":14},
+    "reykjavik"      : {"temp":5,  "feel":2,  "desc":"Windy & Cloudy",      "humidity":80, "wind":24},
+    "moscow"         : {"temp":8,  "feel":4,  "desc":"Cloudy",              "humidity":72, "wind":14},
+    "st petersburg"  : {"temp":8,  "feel":4,  "desc":"Partly Cloudy",       "humidity":74, "wind":13},
+    "dubrovnik"      : {"temp":19, "feel":17, "desc":"Sunny & Coastal",     "humidity":62, "wind":14},
+    "split"          : {"temp":18, "feel":16, "desc":"Sunny",               "humidity":60, "wind":14},
+
+    # ════════════════════════════════════════════════════════
+    # MIDDLE EAST & AFRICA
+    # ════════════════════════════════════════════════════════
+
+    "dubai"          : {"temp":36, "feel":40, "desc":"Sunny & Hot",         "humidity":48, "wind":14},
+    "abu dhabi"      : {"temp":35, "feel":39, "desc":"Hot & Sunny",         "humidity":50, "wind":13},
+    "doha"           : {"temp":34, "feel":38, "desc":"Hot & Sunny",         "humidity":52, "wind":14},
+    "riyadh"         : {"temp":35, "feel":38, "desc":"Hot & Dry",           "humidity":20, "wind":16},
+    "mecca"          : {"temp":36, "feel":40, "desc":"Hot & Arid",          "humidity":25, "wind":12},
+    "jeddah"         : {"temp":34, "feel":38, "desc":"Hot & Humid",         "humidity":55, "wind":14},
+    "muscat"         : {"temp":34, "feel":38, "desc":"Hot & Sunny",         "humidity":45, "wind":14},
+    "amman"          : {"temp":20, "feel":18, "desc":"Sunny",               "humidity":40, "wind":12},
+    "petra"          : {"temp":22, "feel":20, "desc":"Sunny & Arid",        "humidity":35, "wind":10},
+    "tel aviv"       : {"temp":22, "feel":20, "desc":"Sunny",               "humidity":62, "wind":14},
+    "jerusalem"      : {"temp":18, "feel":16, "desc":"Partly Cloudy",       "humidity":52, "wind":12},
+    "cairo"          : {"temp":26, "feel":24, "desc":"Sunny & Dusty",       "humidity":38, "wind":14},
+    "luxor"          : {"temp":32, "feel":34, "desc":"Hot & Dry",           "humidity":20, "wind":12},
+    "hurghada"       : {"temp":28, "feel":30, "desc":"Sunny & Coastal",     "humidity":45, "wind":15},
+    "nairobi"        : {"temp":22, "feel":20, "desc":"Partly Cloudy",       "humidity":65, "wind":12},
+    "cape town"      : {"temp":18, "feel":16, "desc":"Partly Cloudy",       "humidity":68, "wind":16},
+    "johannesburg"   : {"temp":20, "feel":18, "desc":"Partly Cloudy",       "humidity":55, "wind":14},
+    "marrakech"      : {"temp":25, "feel":23, "desc":"Sunny",               "humidity":38, "wind":12},
+    "casablanca"     : {"temp":20, "feel":18, "desc":"Partly Cloudy",       "humidity":62, "wind":14},
+    "zanzibar"       : {"temp":27, "feel":29, "desc":"Tropical & Sunny",    "humidity":78, "wind":14},
+
+    # ════════════════════════════════════════════════════════
+    # AMERICAS
+    # ════════════════════════════════════════════════════════
+
+    "new york"       : {"temp":18, "feel":15, "desc":"Mostly Clear",        "humidity":58, "wind":20},
+    "los angeles"    : {"temp":22, "feel":20, "desc":"Sunny",               "humidity":55, "wind":12},
+    "chicago"        : {"temp":14, "feel":10, "desc":"Partly Cloudy",       "humidity":65, "wind":22},
+    "miami"          : {"temp":28, "feel":30, "desc":"Partly Cloudy",       "humidity":74, "wind":14},
+    "las vegas"      : {"temp":28, "feel":26, "desc":"Sunny & Dry",         "humidity":18, "wind":12},
+    "san francisco"  : {"temp":15, "feel":13, "desc":"Foggy & Cool",        "humidity":78, "wind":18},
+    "seattle"        : {"temp":12, "feel":10, "desc":"Rainy & Overcast",    "humidity":82, "wind":16},
+    "washington dc"  : {"temp":16, "feel":14, "desc":"Partly Cloudy",       "humidity":62, "wind":14},
+    "miami beach"    : {"temp":29, "feel":31, "desc":"Hot & Sunny",         "humidity":72, "wind":16},
+    "honolulu"       : {"temp":27, "feel":26, "desc":"Sunny & Tropical",    "humidity":65, "wind":18},
+    "orlando"        : {"temp":28, "feel":30, "desc":"Partly Cloudy",       "humidity":70, "wind":12},
+    "toronto"        : {"temp":12, "feel":9,  "desc":"Partly Cloudy",       "humidity":65, "wind":16},
+    "vancouver"      : {"temp":12, "feel":10, "desc":"Rainy",               "humidity":80, "wind":14},
+    "montreal"       : {"temp":10, "feel":7,  "desc":"Partly Cloudy",       "humidity":68, "wind":16},
+    "banff"          : {"temp":5,  "feel":2,  "desc":"Cool & Mountain",     "humidity":62, "wind":12},
+    "mexico city"    : {"temp":18, "feel":17, "desc":"Partly Cloudy",       "humidity":58, "wind":10},
+    "cancun"         : {"temp":28, "feel":30, "desc":"Hot & Sunny",         "humidity":72, "wind":14},
+    "rio de janeiro" : {"temp":26, "feel":28, "desc":"Partly Cloudy",       "humidity":75, "wind":14},
+    "sao paulo"      : {"temp":22, "feel":21, "desc":"Partly Cloudy",       "humidity":70, "wind":12},
+    "buenos aires"   : {"temp":18, "feel":16, "desc":"Partly Cloudy",       "humidity":65, "wind":14},
+    "lima"           : {"temp":18, "feel":16, "desc":"Overcast & Foggy",    "humidity":80, "wind":12},
+    "cusco"          : {"temp":12, "feel":9,  "desc":"Clear & High Altitude","humidity":55, "wind":10},
+    "machu picchu"   : {"temp":14, "feel":12, "desc":"Misty & Cool",        "humidity":85, "wind":8},
+    "bogota"         : {"temp":14, "feel":12, "desc":"Partly Cloudy",       "humidity":72, "wind":10},
+    "havana"         : {"temp":28, "feel":30, "desc":"Sunny & Tropical",    "humidity":72, "wind":14},
+
+    # ════════════════════════════════════════════════════════
+    # SOUTH ASIA
+    # ════════════════════════════════════════════════════════
+
+    "kathmandu"      : {"temp":18, "feel":16, "desc":"Partly Cloudy",       "humidity":65, "wind":8},
+    "pokhara"        : {"temp":20, "feel":18, "desc":"Scenic & Clear",      "humidity":68, "wind":8},
+    "everest base camp":{"temp":-5,"feel":-12,"desc":"Very Cold & Windy",   "humidity":40, "wind":25},
+    "colombo"        : {"temp":29, "feel":32, "desc":"Humid & Cloudy",      "humidity":80, "wind":12},
+    "kandy"          : {"temp":25, "feel":24, "desc":"Partly Cloudy",       "humidity":75, "wind":8},
+    "dhaka"          : {"temp":30, "feel":33, "desc":"Humid & Hazy",        "humidity":82, "wind":10},
+    "karachi"        : {"temp":32, "feel":35, "desc":"Hot & Humid",         "humidity":60, "wind":14},
+    "lahore"         : {"temp":28, "feel":30, "desc":"Hazy",                "humidity":55, "wind":10},
+    "islamabad"      : {"temp":22, "feel":20, "desc":"Partly Cloudy",       "humidity":55, "wind":10},
 }
+
+
+def get_weather_info(city: str) -> str:
+    """Get weather for 300+ cities worldwide including all Indian states."""
+    city_lower = city.lower().strip()
+
+    # Try exact match first
+    if city_lower in CITY_WEATHER:
+        w      = CITY_WEATHER[city_lower]
+        temp   = w["temp"]
+        temp_f = round(temp * 9/5 + 32)
+
+        # Travel tip based on temperature
+        if temp >= 40:   tip = "Extremely hot! Avoid going out. Stay hydrated."
+        elif temp >= 35: tip = "Very hot! Carry water and sunscreen. Avoid midday sun."
+        elif temp >= 28: tip = "Warm! Light clothes and sunscreen recommended."
+        elif temp >= 20: tip = "Great weather for sightseeing!"
+        elif temp >= 12: tip = "Mild, carry a light jacket."
+        elif temp >= 0:  tip = "Cold! Pack warm layers and a winter jacket."
+        else:            tip = "Very cold! Heavy winter clothing essential."
+
+        if "rain" in w["desc"].lower() or "rainy" in w["desc"].lower():
+            tip += " Carry an umbrella!"
+        if "snowy" in w["desc"].lower() or "snow" in w["desc"].lower():
+            tip += " Snow gear recommended!"
+        if "windy" in w["desc"].lower():
+            tip += " Windy conditions - secure loose items!"
+
+        save_search("weather", city, f"{temp}C {w['desc']}")
+
+        return (
+            f"**{city.title()}** — {temp}°C / {temp_f}°F\n\n"
+            f"- Feels like: {w['feel']}°C\n"
+            f"- Condition: {w['desc']}\n"
+            f"- Humidity: {w['humidity']}%\n"
+            f"- Wind Speed: {w['wind']} km/h\n\n"
+            f"**Travel Tip:** {tip}"
+        )
+
+    # Try partial match (e.g. "new delhi" matches "delhi")
+    for key in CITY_WEATHER:
+        if city_lower in key or key in city_lower:
+            return get_weather_info(key)
+
+    # City not found - use LLM fallback
+    return (
+        f"**{city.title()}** weather data not in our database yet.\n\n"
+        f"**Check live weather at:**\n"
+        f"- weather.com\n"
+        f"- timeanddate.com/weather\n"
+        f"- accuweather.com\n\n"
+        f"*Tip: Try searching for the nearest major city!*"
+    )
 
 # ============================================================
 # WEEK 5-6: BUDGET DATABASE

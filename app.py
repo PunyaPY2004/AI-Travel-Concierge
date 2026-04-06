@@ -514,7 +514,7 @@ with st.spinner("Loading AI Travel Concierge..."):
 # ── Header ────────────────────────────────────────────────────
 st.title("✈️ AI Travel Concierge")
 st.markdown(
-    f"Smart travel planning made easy — from flights and hotels to itineraries and budgets, all in one place."
+    f" Intelligent AI-Powered Travel Planning Assistant"
     
 )
 

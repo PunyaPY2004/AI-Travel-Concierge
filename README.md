@@ -88,8 +88,8 @@
 
 ## 🔑 APIs Used
 
-| API | Purpose | Free Tier |
-|-----|---------|-----------|
+| API | Purpose |
+|-----|---------|
 | [Groq](https://console.groq.com) | LLM (LLaMA 3.3) | 
 | [SERP API](https://serpapi.com) | Flight & Hotel search | 
 | [Weatherstack](https://weatherstack.com) | Weather data | 

@@ -245,10 +245,10 @@ The project includes an automated test suite (Week 7-8):
 ✅ Search Test       — Visa & travel info search
 
 Score: 5/5 tests passed | Avg response: ~3.2s
-
+```
 ---
 
-## 🔮 Future Improvements (Track B Upgrade Path)
+## 🔮 Future Improvements 
 
 - [ ] Migrate to LangGraph for complex agent workflows
 - [ ] Add FastAPI backend + React frontend

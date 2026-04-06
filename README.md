@@ -152,7 +152,7 @@ ai-travel-concierge/
 ## 🚀 How to Run
 
 ### Option 1: Streamlit Cloud (Deployed)
-Visit the live app: **[your-app-url.streamlit.app](https://your-app-url.streamlit.app)**
+**Visit the live app(https://ai-tavel-concierge.streamlit.app/)**
 
 ### Option 2: Google Colab
 1. Open any notebook from the `notebooks/` folder in Google Colab

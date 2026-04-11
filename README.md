@@ -273,6 +273,7 @@ Score: 5/5 tests passed | Avg response: ~3.2s
 
 ## 👨‍💻 Author
 
+- *Team Name*: Mind Matrix
 - *Project*: AI Travel Concierge
 - *Track*: Track A (Essential)
 - *Duration*: 8 Weeks

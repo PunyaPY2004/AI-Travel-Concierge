@@ -27,6 +27,19 @@
 |:-:|:-:|:-:|
 | AI-powered travel chat | Day-wise itinerary + budget | 240+ city weather + live rates |
 
+<img width="1920" height="1080" alt="Screenshot (374)" src="https://github.com/user-attachments/assets/cf4b35ad-61fc-4a1a-8139-2fb201f6805b" />
+<img width="1920" height="1080" alt="Screenshot (375)" src="https://github.com/user-attachments/assets/fa698bb4-2f6d-4e33-85ba-ba4966bfb2d5" />
+<img width="1920" height="1080" alt="Screenshot (376)" src="https://github.com/user-attachments/assets/64249957-0e6b-4904-9395-9d06f208c205" />
+<img width="1920" height="1080" alt="Screenshot (377)" src="https://github.com/user-attachments/assets/8016f459-091e-4760-aee3-d713f5306e32" />
+<img width="1920" height="1080" alt="Screenshot (378)" src="https://github.com/user-attachments/assets/84c2b41e-1fce-47ea-8bc1-b287d9e4d890" />
+<img width="1920" height="1080" alt="Screenshot (379)" src="https://github.com/user-attachments/assets/f26a5b47-dbb0-4246-b076-53ad98e6ba68" />
+<img width="1920" height="1080" alt="Screenshot (380)" src="https://github.com/user-attachments/assets/35918eff-30a3-4b8a-8f4f-ae95e37dae4a" />
+<img width="1920" height="1080" alt="Screenshot (381)" src="https://github.com/user-attachments/assets/0ba6f43b-dfd7-449d-9235-ca1c9d00a79f" />
+<img width="1920" height="1080" alt="Screenshot (382)" src="https://github.com/user-attachments/assets/8cfa1a19-ee37-45db-8a43-3d8dfa12f0c2" />
+<img width="1920" height="1080" alt="Screenshot (383)" src="https://github.com/user-attachments/assets/1d29dda6-e0a0-4607-8fe9-26f0914f6f62" />
+<img width="1920" height="1080" alt="Screenshot (384)" src="https://github.com/user-attachments/assets/656f72dc-1e10-4941-b237-0f25ae1db74a" />
+
+
 ---
 
 ## 🌟 Key Features

@@ -2675,7 +2675,7 @@ Try: *"Plan a 5-day Bali trip for 2 people on a mid-range budget"*""")],
             - **Week 5-6**: Itinerary, Budget, SQLite DB
             - **Week 7-8**: Testing, polish, final demo
 
-            **Project by:** Mind Matrix | **Internship:** 2024
+            **Project by:** Mind Matrix 
             """)
 
 final_app.launch(share=True, debug=False)

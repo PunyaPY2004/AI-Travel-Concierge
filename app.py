@@ -148,15 +148,8 @@ def export_trip(destination: str, days: int, budget: str, travelers: int,
 # =============================================================
 st.title("✈️ AI Travel Concierge")
 st.markdown(
-    f"**Powered by Groq ({model_name}) + LangChain**  "
-    "|  Your complete AI travel planning assistant — Weeks 1-8"
+    f"**Intelligent AI-Powered Travel Planning Assistant"
 )
-
-if llm:
-    st.success("✅ AI Ready! All 7 tools active.")
-else:
-    st.error("❌ LLM failed to load. Check **GROQ_API_KEY** in Streamlit Secrets.")
-    st.stop()
 
 st.divider()
 

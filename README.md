@@ -120,11 +120,14 @@ ai-travel-concierge/
 ├──agent.py                 ← LLM and class
 ├──rag_pipeline.py          ← RAG
 ├──tools.py                 ← wheather,currency,hotels,flights,web search tools
+├──database.py              ← SQLite operations
 ├── requirements.txt        ← Python dependencies
 ├── README.md               ← This file
 ├── .gitignore              ← Files excluded from Git
 │
-└── aitravelconcierge1-8     ← Weekly development notebook
+└── notebook                ← Weekly development notebook
+  └──aitravelconcierge1-8.py 
+
     
 
 ```

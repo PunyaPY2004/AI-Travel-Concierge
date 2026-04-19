@@ -1,4 +1,17 @@
-travel_knowledge = [
+# ============================================================
+# rag_pipeline.py
+# RAG knowledge base — FAISS + HuggingFace embeddings
+# ============================================================
+from langchain_core.documents        import Document
+from langchain_text_splitters        import RecursiveCharacterTextSplitter
+from langchain_community.vectorstores import FAISS
+from langchain_huggingface           import HuggingFaceEmbeddings
+from langchain_core.prompts          import PromptTemplate
+from langchain_core.output_parsers   import StrOutputParser
+from langchain_core.runnables        import RunnablePassthrough
+
+# ── Travel knowledge documents ────────────────────────────────
+TRAVEL_KNOWLEDGE = [
     """
     VISA INFORMATION:
     Most countries require a valid passport with at least 6 months validity.
@@ -9,9 +22,9 @@ travel_knowledge = [
     """,
     """
     TRAVEL BUDGET TIPS:
-    Southeast Asia (Thailand, Vietnam, Bali) is budget-friendly: $30-60/day including accommodation.
+    Southeast Asia (Thailand, Vietnam, Bali): $30-60/day including accommodation.
     Western Europe averages $100-200/day for mid-range travel.
-    Japan costs $80-150/day; best visited in spring (cherry blossoms) or autumn (fall colors).
+    Japan costs $80-150/day; best visited in spring (cherry blossoms) or autumn.
     Book flights 6-8 weeks in advance for best prices.
     Use incognito mode when searching flights to avoid price tracking.
     """,
@@ -34,8 +47,7 @@ travel_knowledge = [
     """,
     """
     INDIA TRAVEL INFORMATION:
-    India has diverse climates - plan based on region and season.
-    North India (Delhi, Agra, Jaipur) Golden Triangle: October-March is ideal.
+    North India Golden Triangle (Delhi, Agra, Jaipur): October-March is ideal.
     Kerala backwaters: November-February is best.
     Goa beaches: November-February (peak season), avoid monsoon June-September.
     Himachal Pradesh and Ladakh: May-September.
@@ -47,7 +59,6 @@ travel_knowledge = [
     Best days to book: Tuesday and Wednesday for cheaper fares.
     Use Google Flights, Skyscanner, or Kayak to compare prices.
     Flexible date search can save 20-40% on airfare.
-    Consider nearby airports for cheaper options.
     Budget airlines: IndiGo, SpiceJet (India), Ryanair (Europe), AirAsia (Asia).
     Always check baggage allowance before booking.
     """,
@@ -57,34 +68,13 @@ travel_knowledge = [
     Compare on Booking.com, Airbnb, Hotels.com, MakeMyTrip.
     Hostels are great for solo travelers ($10-25/night).
     Mid-range hotels: $40-100/night globally.
-    Check cancellation policies, especially for long trips.
-    Location matters - staying central saves on transport costs.
-    """
+    Location matters — staying central saves on transport costs.
+    """,
 ]
 
-docs       = [Document(page_content=text) for text in travel_knowledge]
-splitter   = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
-split_docs = splitter.split_documents(docs)
-
-print("⏳ Step 3: Loading embeddings (first time ~30 seconds)...")
-embeddings = HuggingFaceEmbeddings(
-    model_name="all-MiniLM-L6-v2",
-    model_kwargs={"device": "cpu"},
-    encode_kwargs={"normalize_embeddings": True}
-)
-vectorstore = FAISS.from_documents(split_docs, embeddings)
-retriever   = vectorstore.as_retriever(search_kwargs={"k": 3})
-print(f"✅ Step 3: RAG Knowledge base ready with {len(split_docs)} chunks!")
-
-
-# ============================================================
-# BASIC RAG TRAVEL CHATBOT - FINAL FIXED VERSION
-# ============================================================
-from langchain_core.prompts import PromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-from langchain_core.runnables import RunnablePassthrough
-
-TRAVEL_PROMPT_TEMPLATE = """
+# ── RAG prompt ────────────────────────────────────────────────
+TRAVEL_PROMPT = PromptTemplate(
+    template="""
 You are an expert AI Travel Concierge with deep knowledge about travel worldwide.
 You are friendly, helpful, and provide practical, actionable travel advice.
 
@@ -101,42 +91,43 @@ Instructions:
 - Keep response concise but complete
 
 Answer:
-"""
-
-TRAVEL_PROMPT = PromptTemplate(
-    template=TRAVEL_PROMPT_TEMPLATE,
-    input_variables=["context", "question"]
+""",
+    input_variables=["context", "question"],
 )
 
-def format_docs(docs):
-    return "\n\n".join(doc.page_content for doc in docs)
 
-# Build RAG chain
-travel_qa_chain = (
-    {
-        "context" : retriever | format_docs,
-        "question": RunnablePassthrough()
-    }
-    | TRAVEL_PROMPT
-    | llm
-    | StrOutputParser()
-)
+def build_rag_chain(llm):
+    """
+    Build FAISS vectorstore from travel knowledge,
+    return a runnable RAG chain.
+    """
+    docs       = [Document(page_content=t) for t in TRAVEL_KNOWLEDGE]
+    splitter   = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
+    split_docs = splitter.split_documents(docs)
 
-def basic_travel_chat(question: str) -> str:
+    embeddings  = HuggingFaceEmbeddings(
+        model_name="all-MiniLM-L6-v2",
+        model_kwargs={"device": "cpu"},
+        encode_kwargs={"normalize_embeddings": True},
+    )
+    vectorstore = FAISS.from_documents(split_docs, embeddings)
+    retriever   = vectorstore.as_retriever(search_kwargs={"k": 3})
+
+    def _fmt(docs):
+        return "\n\n".join(d.page_content for d in docs)
+
+    chain = (
+        {"context": retriever | _fmt, "question": RunnablePassthrough()}
+        | TRAVEL_PROMPT
+        | llm
+        | StrOutputParser()
+    )
+    return chain
+
+
+def rag_chat(question: str, chain) -> str:
+    """Ask the RAG chain a question."""
     try:
-        return travel_qa_chain.invoke(question)
+        return chain.invoke(question)
     except Exception as e:
-        return f"Error: {str(e)}"
-
-# Test
-print("🧪 Testing the basic travel chatbot...\n")
-test_questions = [
-    "What's the best time to visit Bali?",
-    "Give me budget tips for Southeast Asia travel",
-    "What documents do I need for international travel?"
-]
-
-for q in test_questions:
-    print(f"❓ Q: {q}")
-    print(f"🤖 A: {basic_travel_chat(q)}")
-    print("-" * 60)
+        return f"RAG error: {str(e)}"

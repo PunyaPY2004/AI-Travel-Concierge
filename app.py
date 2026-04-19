@@ -149,6 +149,7 @@ def export_trip(destination: str, days: int, budget: str, travelers: int,
 st.title("✈️ AI Travel Concierge")
 st.markdown(
     f"**Intelligent AI-Powered Travel Planning Assistant"
+     st.stop()
 st.divider()
 
 # =============================================================

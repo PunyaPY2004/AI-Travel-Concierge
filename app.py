@@ -148,9 +148,8 @@ def export_trip(destination: str, days: int, budget: str, travelers: int,
 # =============================================================
 st.title("✈️ AI Travel Concierge")
 st.markdown(
-    f"**Intelligent AI-Powered Travel Planning Assistant"
+    f"**Intelligent AI-Powered Travel Planning Assistant "
 )
-
 st.divider()
 
 # =============================================================
@@ -178,7 +177,7 @@ with tab1:
                 "👋 Hello! I'm TravelBot, your AI Travel Concierge!\n\n"
                 "I can help with:\n"
                 "✈️ Flights  |  🏨 Hotels  |  🌤️ Weather\n"
-                "🗓️ Itineraries  |  💰 Budgets  |  💱 Currency\n\n"
+                "🗓️ Itineraries  |  💰 Budgets  |  💱 Currency | 🛂 Visa | 🎒 Packing\n\n"
                 "*Try: Plan a 5-day Bali trip for 2 people mid-range budget*"
             ),
         }]

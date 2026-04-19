@@ -26,4 +26,5 @@ gradio
 # sqlite3 is built into Python - no install needed
 
 # Utilities
+psutil
 python-dotenv

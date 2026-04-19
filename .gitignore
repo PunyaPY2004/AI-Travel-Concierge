@@ -2,6 +2,7 @@
 .env
 *.env
 secrets.txt
+secrets.toml
 .streamlit/secrets.toml
 
 # Python cache

@@ -338,7 +338,7 @@ with tab4:
         "🛂 Visa Information",
         "💰 Travel Budget Tips",
         "🎒 Packing Essentials",
-        "🌍 Top Destinations 2024",
+        "🌍 Top Destinations ",
         "🇮🇳 India Travel Guide",
         "✈️ Flight Booking Tips",
         "🏨 Hotel Booking Tips",

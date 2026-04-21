@@ -153,7 +153,7 @@ st.markdown(
 )
 
 if llm:
-    st.success("✅  Ready!")
+    st.success("✅ Ready!")
 else:
     st.error("❌ LLM failed. Check GROQ_API_KEY in Secrets.")
     st.stop()

@@ -148,7 +148,7 @@ def export_trip(destination: str, days: int, budget: str, travelers: int,
 # ============================================================
 st.title("✈️ AI Travel Concierge")
 st.markdown(
-    f"**Powered by Groq ({model_name}) + LangChain** | "
+    f"**Powered by Groq + LangChain** | "
     "Intelligent AI-Powered Travel Planning Assistant"
 )
 

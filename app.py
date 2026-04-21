@@ -150,7 +150,7 @@ st.title("✈️ AI Travel Concierge")
 st.markdown(
     f"**Intelligent AI-Powered Travel Planning Assistant"
 )
-     st.stop()
+     
 st.divider()
 
 # =============================================================

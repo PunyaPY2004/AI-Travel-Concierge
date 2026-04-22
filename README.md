@@ -125,7 +125,7 @@ ai-travel-concierge/
 ├── README.md               ← This file
 ├── .gitignore              ← Files excluded from Git
 │
-└── notebook                ← Weekly development notebook
+└── notebooks                ← Weekly development notebook
   └──aitravelconcierge1-8.py 
 
     

@@ -13,11 +13,14 @@ st.set_page_config(
 )
 
 # ── Bootstrap imports ─────────────────────────────────────────
-from agent       import load_llm, build_executor, get_model_name
-from tools       import ALL_TOOLS, CITY_WEATHER, DESTINATION_COSTS
+import sys, os
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "backend"))
+
+from agent        import load_llm, build_executor, get_model_name
+from tools        import ALL_TOOLS, CITY_WEATHER, DESTINATION_COSTS
 from rag_pipeline import build_rag_chain, rag_chat, TRAVEL_KNOWLEDGE
-from database    import init_database, save_search, get_search_history, get_saved_itineraries
-from agent       import EXCHANGERATE_API_KEY
+from database     import init_database, save_search, get_search_history, get_saved_itineraries
+from agent        import EXCHANGERATE_API_KEY
 
 # ── One-time init ─────────────────────────────────────────────
 init_database()
@@ -250,7 +253,7 @@ with tab2:
         exp_btn = st.button("📥 Export Full Plan", use_container_width=True)
         if exp_btn and dest:
             with st.spinner("Generating full plan..."):
-                from tools import generate_itinerary, estimate_budget
+                from backend.tools import generate_itinerary, estimate_budget
                 itin_txt = generate_itinerary.invoke(f"{dest} {days} {budget} {travelers}")
                 bud_txt  = estimate_budget.invoke(f"{dest} {days} {budget} {travelers}")
             content = export_trip(dest, days, budget, travelers, itin_txt, bud_txt)
@@ -268,7 +271,7 @@ with tab2:
         if plan_btn and dest:
             with itin_tab:
                 with st.spinner(f"Creating {days}-day {dest} itinerary..."):
-                    from tools import generate_itinerary
+                    from backend.tools import generate_itinerary
                     st.write(generate_itinerary.invoke(f"{dest} {days} {budget} {travelers}"))
 
         if cost_btn and dest:

@@ -116,14 +116,11 @@
 ```
 ai-travel-concierge/
 │
-├── app.py                  ← Main Streamlit app (ALL weeks combined)
-├──backend/
-   └──agent.py              ← LLM and class
-   └──tools.py              ← wheather,currency,hotels,flights,web search tools
-   └──database.py           ← SQLite operations
-   └── rag_pipeline.py      ← RAG
-├──frontend/
-   └──app.py                ← description of main 
+├── app.py                  ← Main Streamlit app (ALL weeks combined)           (frontend)
+├── agent.py                ← LLM and class                                     (backend)
+├── tools.py                ← wheather,currency,hotels,flights,web search tools (backend)
+├── database.py             ← SQLite operations                                 (backend)
+├── rag_pipeline.py         ← RAG                                               (backend)
 ├── requirements.txt        ← Python dependencies
 ├── README.md               ← This file
 ├── .gitignore              ← Files excluded from Git
